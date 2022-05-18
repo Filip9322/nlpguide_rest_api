@@ -1,5 +1,5 @@
 [Unit]
-Descripcion=Gunicorn Daemon for FastAPI Demo Application
+Description=Gunicorn Daemon for FastAPI Demo Application
 After=network.target
 
 
