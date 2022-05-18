@@ -455,3 +455,445 @@ TypeError: __call__() missing 1 required positional argument: 'send'
 [2022-05-18 07:01:19 +0000] [26808] [WARNING] Worker with pid 26810 was terminated due to signal 15
 [2022-05-18 07:01:19 +0000] [26808] [WARNING] Worker with pid 26811 was terminated due to signal 15
 [2022-05-18 07:01:19 +0000] [26808] [INFO] Shutting down: Master
+[2022-05-18 07:23:16 +0000] [31859] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/ar/python/nlpguide_rest_api/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ar/python/nlpguide_rest_api
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/ar/python/nlpguide_rest_api/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ar/python/nlpguide_rest_api/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f9d28d36280>
+  on_reload: <function OnReload.on_reload at 0x7f9d28d363a0>
+  when_ready: <function WhenReady.when_ready at 0x7f9d28d364c0>
+  pre_fork: <function Prefork.pre_fork at 0x7f9d28d365e0>
+  post_fork: <function Postfork.post_fork at 0x7f9d28d36700>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f9d28d36820>
+  worker_int: <function WorkerInt.worker_int at 0x7f9d28d36940>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f9d28d36a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f9d28d36b80>
+  pre_request: <function PreRequest.pre_request at 0x7f9d28d36ca0>
+  post_request: <function PostRequest.post_request at 0x7f9d28d36d30>
+  child_exit: <function ChildExit.child_exit at 0x7f9d28d36e50>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f9d28d36f70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f9d28d4c0d0>
+  on_exit: <function OnExit.on_exit at 0x7f9d28d4c1f0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-05-18 07:23:16 +0000] [31859] [INFO] Starting gunicorn 20.1.0
+[2022-05-18 07:23:16 +0000] [31859] [DEBUG] Arbiter booted
+[2022-05-18 07:23:16 +0000] [31859] [INFO] Listening at: unix:/home/ar/python/nlpguide_rest_api/gunicorn.sock (31859)
+[2022-05-18 07:23:16 +0000] [31859] [INFO] Using worker: sync
+[2022-05-18 07:23:16 +0000] [31861] [INFO] Booting worker with pid: 31861
+[2022-05-18 07:23:16 +0000] [31862] [INFO] Booting worker with pid: 31862
+[2022-05-18 07:23:16 +0000] [31859] [DEBUG] 2 workers
+[2022-05-18 07:24:04 +0000] [31861] [DEBUG] GET /hello/wanwun
+[2022-05-18 07:24:04 +0000] [31861] [ERROR] Error handling request /hello/wanwun
+Traceback (most recent call last):
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 136, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 179, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: __call__() missing 1 required positional argument: 'send'
+[2022-05-18 07:25:06 +0000] [31861] [DEBUG] GET /
+[2022-05-18 07:25:06 +0000] [31861] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 136, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 179, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: __call__() missing 1 required positional argument: 'send'
+[2022-05-18 07:25:18 +0000] [31861] [DEBUG] GET /hello/wanwun
+[2022-05-18 07:25:18 +0000] [31861] [ERROR] Error handling request /hello/wanwun
+Traceback (most recent call last):
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 136, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 179, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: __call__() missing 1 required positional argument: 'send'
+[2022-05-18 07:26:31 +0000] [31859] [INFO] Handling signal: term
+[2022-05-18 07:26:31 +0000] [31861] [INFO] Worker exiting (pid: 31861)
+[2022-05-18 07:26:31 +0000] [31862] [INFO] Worker exiting (pid: 31862)
+[2022-05-18 07:26:31 +0000] [31859] [WARNING] Worker with pid 31861 was terminated due to signal 15
+[2022-05-18 07:26:31 +0000] [31859] [WARNING] Worker with pid 31862 was terminated due to signal 15
+[2022-05-18 07:26:32 +0000] [31859] [INFO] Shutting down: Master
+[2022-05-18 07:34:32 +0000] [32049] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/ar/python/nlpguide_rest_api/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ar/python/nlpguide_rest_api
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/ar/python/nlpguide_rest_api/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ar/python/nlpguide_rest_api/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f7e6c8a2280>
+  on_reload: <function OnReload.on_reload at 0x7f7e6c8a23a0>
+  when_ready: <function WhenReady.when_ready at 0x7f7e6c8a24c0>
+  pre_fork: <function Prefork.pre_fork at 0x7f7e6c8a25e0>
+  post_fork: <function Postfork.post_fork at 0x7f7e6c8a2700>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7e6c8a2820>
+  worker_int: <function WorkerInt.worker_int at 0x7f7e6c8a2940>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f7e6c8a2a60>
+  pre_exec: <function PreExec.pre_exec at 0x7f7e6c8a2b80>
+  pre_request: <function PreRequest.pre_request at 0x7f7e6c8a2ca0>
+  post_request: <function PostRequest.post_request at 0x7f7e6c8a2d30>
+  child_exit: <function ChildExit.child_exit at 0x7f7e6c8a2e50>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7e6c8a2f70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f7e6c8b80d0>
+  on_exit: <function OnExit.on_exit at 0x7f7e6c8b81f0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-05-18 07:34:32 +0000] [32049] [INFO] Starting gunicorn 20.1.0
+[2022-05-18 07:34:32 +0000] [32049] [DEBUG] Arbiter booted
+[2022-05-18 07:34:32 +0000] [32049] [INFO] Listening at: unix:/home/ar/python/nlpguide_rest_api/gunicorn.sock (32049)
+[2022-05-18 07:34:32 +0000] [32049] [INFO] Using worker: sync
+[2022-05-18 07:34:32 +0000] [32051] [INFO] Booting worker with pid: 32051
+[2022-05-18 07:34:32 +0000] [32052] [INFO] Booting worker with pid: 32052
+[2022-05-18 07:34:32 +0000] [32049] [DEBUG] 2 workers
+[2022-05-18 07:35:13 +0000] [32051] [DEBUG] GET /hello/wanwun
+[2022-05-18 07:35:13 +0000] [32051] [ERROR] Error handling request /hello/wanwun
+Traceback (most recent call last):
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 136, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 179, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: __call__() missing 1 required positional argument: 'send'
+[2022-05-18 07:46:35 +0000] [32049] [INFO] Handling signal: term
+[2022-05-18 07:46:35 +0000] [32051] [INFO] Worker exiting (pid: 32051)
+[2022-05-18 07:46:35 +0000] [32052] [INFO] Worker exiting (pid: 32052)
+[2022-05-18 07:46:35 +0000] [32049] [WARNING] Worker with pid 32051 was terminated due to signal 15
+[2022-05-18 07:46:35 +0000] [32049] [WARNING] Worker with pid 32052 was terminated due to signal 15
+[2022-05-18 07:46:35 +0000] [32049] [INFO] Shutting down: Master
+[2022-05-18 07:46:51 +0000] [32224] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/ar/python/nlpguide_rest_api/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ar/python/nlpguide_rest_api
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/ar/python/nlpguide_rest_api/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ar/python/nlpguide_rest_api/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7facd8669280>
+  on_reload: <function OnReload.on_reload at 0x7facd86693a0>
+  when_ready: <function when_ready at 0x7facd7f869d0>
+  pre_fork: <function pre_fork at 0x7facd86950d0>
+  post_fork: <function post_fork at 0x7facd867ff70>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7facd8669820>
+  worker_int: <function worker_int at 0x7facd7f86a60>
+  worker_abort: <function worker_abort at 0x7facd7f86af0>
+  pre_exec: <function pre_exec at 0x7facd833d280>
+  pre_request: <function PreRequest.pre_request at 0x7facd8669ca0>
+  post_request: <function PostRequest.post_request at 0x7facd8669d30>
+  child_exit: <function ChildExit.child_exit at 0x7facd8669e50>
+  worker_exit: <function WorkerExit.worker_exit at 0x7facd8669f70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7facd867f0d0>
+  on_exit: <function OnExit.on_exit at 0x7facd867f1f0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-05-18 07:46:51 +0000] [32224] [INFO] Starting gunicorn 20.1.0
+[2022-05-18 07:46:51 +0000] [32224] [DEBUG] Arbiter booted
+[2022-05-18 07:46:51 +0000] [32224] [INFO] Listening at: unix:/home/ar/python/nlpguide_rest_api/gunicorn.sock (32224)
+[2022-05-18 07:46:51 +0000] [32224] [INFO] Using worker: sync
+[2022-05-18 07:46:51 +0000] [32224] [INFO] Server is ready. Spawning workers
+[2022-05-18 07:46:51 +0000] [32226] [INFO] Booting worker with pid: 32226
+[2022-05-18 07:46:51 +0000] [32226] [INFO] Worker spawned (pid: 32226)
+[2022-05-18 07:46:51 +0000] [32227] [INFO] Booting worker with pid: 32227
+[2022-05-18 07:46:51 +0000] [32227] [INFO] Worker spawned (pid: 32227)
+[2022-05-18 07:46:51 +0000] [32224] [DEBUG] 2 workers
+[2022-05-18 07:46:56 +0000] [32226] [DEBUG] GET /hello/wanwun
+[2022-05-18 07:46:56 +0000] [32226] [ERROR] Error handling request /hello/wanwun
+Traceback (most recent call last):
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 136, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/home/ar/python/nlpguide_rest_api/venv/lib/python3.8/site-packages/gunicorn/workers/sync.py", line 179, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+TypeError: __call__() missing 1 required positional argument: 'send'
+[2022-05-18 07:52:33 +0000] [32224] [INFO] Handling signal: term
+[2022-05-18 07:52:33 +0000] [32226] [INFO] Worker exiting (pid: 32226)
+[2022-05-18 07:52:33 +0000] [32227] [INFO] Worker exiting (pid: 32227)
+[2022-05-18 07:52:33 +0000] [32224] [WARNING] Worker with pid 32226 was terminated due to signal 15
+[2022-05-18 07:52:33 +0000] [32224] [WARNING] Worker with pid 32227 was terminated due to signal 15
+[2022-05-18 07:52:33 +0000] [32224] [INFO] Shutting down: Master
+[2022-05-18 07:52:44 +0000] [32338] [DEBUG] Current configuration:
+  config: gunicorn_conf.py
+  wsgi_app: None
+  bind: ['unix:/home/ar/python/nlpguide_rest_api/gunicorn.sock']
+  backlog: 2048
+  workers: 2
+  worker_class: uvicorn.workers.UvicornWorker
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ar/python/nlpguide_rest_api
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 33
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/ar/python/nlpguide_rest_api/access_log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ar/python/nlpguide_rest_api/error_log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: main:app
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fd8d3356280>
+  on_reload: <function OnReload.on_reload at 0x7fd8d33563a0>
+  when_ready: <function when_ready at 0x7fd8d2c739d0>
+  pre_fork: <function pre_fork at 0x7fd8d33820d0>
+  post_fork: <function post_fork at 0x7fd8d336cf70>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fd8d3356820>
+  worker_int: <function worker_int at 0x7fd8d2c73a60>
+  worker_abort: <function worker_abort at 0x7fd8d2c73af0>
+  pre_exec: <function pre_exec at 0x7fd8d302a280>
+  pre_request: <function PreRequest.pre_request at 0x7fd8d3356ca0>
+  post_request: <function PostRequest.post_request at 0x7fd8d3356d30>
+  child_exit: <function ChildExit.child_exit at 0x7fd8d3356e50>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fd8d3356f70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fd8d336c0d0>
+  on_exit: <function OnExit.on_exit at 0x7fd8d336c1f0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2022-05-18 07:52:44 +0000] [32338] [INFO] Starting gunicorn 20.1.0
+[2022-05-18 07:52:44 +0000] [32338] [DEBUG] Arbiter booted
+[2022-05-18 07:52:44 +0000] [32338] [INFO] Listening at: unix:/home/ar/python/nlpguide_rest_api/gunicorn.sock (32338)
+[2022-05-18 07:52:44 +0000] [32338] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2022-05-18 07:52:44 +0000] [32338] [INFO] Server is ready. Spawning workers
+[2022-05-18 07:52:44 +0000] [32340] [INFO] Booting worker with pid: 32340
+[2022-05-18 07:52:44 +0000] [32340] [INFO] Worker spawned (pid: 32340)
+[2022-05-18 07:52:44 +0000] [32341] [INFO] Booting worker with pid: 32341
+[2022-05-18 07:52:44 +0000] [32341] [INFO] Worker spawned (pid: 32341)
+[2022-05-18 07:52:44 +0000] [32338] [DEBUG] 2 workers
+[2022-05-18 07:52:44 +0000] [32340] [INFO] Started server process [32340]
+[2022-05-18 07:52:44 +0000] [32340] [INFO] Waiting for application startup.
+[2022-05-18 07:52:44 +0000] [32340] [INFO] Application startup complete.
+[2022-05-18 07:52:44 +0000] [32341] [INFO] Started server process [32341]
+[2022-05-18 07:52:44 +0000] [32341] [INFO] Waiting for application startup.
+[2022-05-18 07:52:44 +0000] [32341] [INFO] Application startup complete.
