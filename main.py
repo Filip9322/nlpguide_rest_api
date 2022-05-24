@@ -1,3 +1,4 @@
+from functools import lru_cache
 from fastapi import FastAPI
 from config import settings
 from enum import Enum
@@ -14,7 +15,6 @@ class ModelName(str, Enum):
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
-
 
 @app.get("/hello/{name}")
 async def say_hello(name: str):
