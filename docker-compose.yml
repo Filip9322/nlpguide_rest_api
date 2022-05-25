@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  db:
+    image: mongo:4
+    container_name: ${IMAGES_MONGO_CRUD_DB_AUTH}
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+      - MONGO_INITDB_DATABASE=${IMAGES_MONGO_CRUD_DB}
+      - MONGO_INITDB_ROOT_USERNAME=${IMAGES_MONGO_CRUD_DB_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${IMAGES_MONGO_CRUD_DB_PASS}
+    volumes:
+      - ./mongo-init.sh:/docker-entrypoint-initdb.d/mongo-init.sh:ro
+      - ./mongo-data:/data/db 
+    ports:
+      - ${DB_PORT}:27017
+    networks:
+      - back_end
+    env_file:
+      - .env
+volumes:
+  gosrc:
+  images_mongo_data:
+networks:
+  back_end:
+    external: true
