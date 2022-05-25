@@ -186,3 +186,6 @@ fabric.properties
 
 # Mac dss tore file
 .DS_Store
+
+# Data storgae
+mongo-data/
