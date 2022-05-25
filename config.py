@@ -57,7 +57,7 @@ class RecipeModel(BaseModel):
             }
         }
 
-class UpdateStudentModel(BaseModel):
+class UpdateRecipeModel(BaseModel):
     name: Optional[str]
     recipe_cousine: Optional[str]
     picture: Optional[str]
